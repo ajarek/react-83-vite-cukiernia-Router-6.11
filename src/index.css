@@ -1,25 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script:regular);
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 :root {
   --mainPink: #ef7998;
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
-  --grey:#eeeeee;
-
+  --mainGrey: #eeeeee;
+  --mainBlack: #000000;
   --yellowTrans: rgba(249, 228, 148, 0.6);
-  
 }
 body {
-  
   font-family: 'Kaushan Script', cursive;
- 
-
-
 }
-
+#root{
+  max-width: 1440px;
+  margin: 0 auto;
+}
