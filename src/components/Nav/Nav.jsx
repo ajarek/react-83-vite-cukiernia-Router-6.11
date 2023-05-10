@@ -40,7 +40,9 @@ const Nav = () => {
         className='link'
         to={'/cart'}
       >
-        🛒
+        <div className="cart-span">
+        🛒<span>0</span>
+        </div>
       </Link>
       </ul>
       <div className='hamburger'>
