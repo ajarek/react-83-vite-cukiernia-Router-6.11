@@ -10,32 +10,16 @@
   --mainPink: #ef7998;
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
+  --grey:#eeeeee;
 
   --yellowTrans: rgba(249, 228, 148, 0.6);
-  --background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-  url('img/ciastka1.png')center fixed;
+  
 }
 body {
   
   font-family: 'Kaushan Script', cursive;
-  background-color: #eeeeee;
+ 
 
 
-}
-
-.nav {
-  height: 12vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 2rem;
-  border-bottom: 1px solid #f4e9c2;
-  background-color: white;
-}
-
-.logo img {
-  width: 12vh;
 }
 

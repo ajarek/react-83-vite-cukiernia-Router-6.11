@@ -1,0 +1,20 @@
+.nav {
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+ 
+  padding: 0 32px;
+  background-color: white;
+}
+.link{
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--mainPink);
+}
+.nav .link img{
+  height:12vh;
+
+}
