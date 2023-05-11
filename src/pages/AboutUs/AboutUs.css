@@ -4,7 +4,6 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0 32px;
   place-items: center;
-  border: 1px solid red;
 }
 .about-us .info h1{
 font-size: 6rem;
