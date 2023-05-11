@@ -1,74 +1,74 @@
 [
   {
    "id": "1",
-    "src": "/img/ciastko1.jpg",
-    "name": "ciastko1",
+    "src": "/img/ciasto1.jpg",
+    "name": "ciasto 1",
     "price":"12"
   },
   {
     "id": "2",
-     "src": "/img/ciastko2.jpg",
-     "name": "ciastko2",
+     "src": "/img/ciasto2.jpg",
+     "name": "ciasto 2",
      "price":"12"
    },
   {
     "id": "3",
-     "src": "/img/ciastko3.jpg",
-     "name": "ciastko3",
+     "src": "/img/ciasto3.jpg",
+     "name": "ciasto 3",
      "price":"12"
    },
   {
     "id": "4",
-     "src": "/img/ciastko4.jpg",
-     "name": "ciastko4",
+     "src": "/img/ciasto4.jpg",
+     "name": "babeczka 4",
      "price":"15"
    },
   {
     "id": "5",
-     "src": "/img/ciastko5.jpg",
-     "name": "ciastko5",
+     "src": "/img/ciasto5.jpg",
+     "name": "babeczka 5",
      "price":"15"
    },
   {
     "id": "6",
-     "src": "/img/ciastko6.jpg",
-     "name": "ciastko6",
+     "src": "/img/ciasto6.jpg",
+     "name": "babeczka 6",
      "price":"15"
    },
   {
     "id": "7",
-     "src": "/img/ciastko7.jpg",
-     "name": "ciastko7",
+     "src": "/img/ciasto7.jpg",
+     "name": "słodycze 7",
      "price":"13"
    },
   {
     "id": "8",
-     "src": "/img/ciastko8.jpg",
-     "name": "ciastko8",
+     "src": "/img/ciasto8.jpg",
+     "name": "słodycze 8",
      "price":"13"
    },
   {
     "id": "9",
-     "src": "/img/ciastko9.jpg",
-     "name": "ciastko9",
+     "src": "/img/ciasto9.jpg",
+     "name": "słodycze 9",
      "price":"13"
    },
   {
     "id": "10",
-     "src": "/img/ciastko10.jpg",
-     "name": "ciastko10",
+     "src": "/img/ciasto10.jpg",
+     "name": "pączki 10",
      "price":"10"
    },
   {
     "id": "11",
-     "src": "/img/ciastko11.jpg",
-     "name": "ciastko11",
+     "src": "/img/ciasto11.jpg",
+     "name": "pączki 11",
      "price":"10"
    },
   {
     "id": "12",
-     "src": "/img/ciastko12.jpg",
-     "name": "ciastko12",
+     "src": "/img/ciasto12.jpg",
+     "name": "pączki 12",
      "price":"10"
    }
 ]

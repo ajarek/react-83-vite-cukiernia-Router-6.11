@@ -1,4 +1,5 @@
 import React from 'react'
+import data from '../../assets/data.json'
 import './Store.css'
 const Store = () => {
   return (
@@ -14,17 +15,22 @@ const Store = () => {
         <button>Słodycze</button>
         <button>Pączki</button>
       </div>
-      <div className="search"><input type="search" name="" id="" /></div>
+      <div className="search"><input type="search" placeholder='🔍 Szukaj' id="" /></div>
       <div className="list">
-        <div className="card">
+        {data.map((dt)=>{
+          return(
+        <div className="card" key={dt.id}>
           <div className="card-img">
-            <img src="/img/ciasto1.jpg" alt="ciastko" />
+            <img src={dt.src} alt="ciastko" />
           </div>
           <div className="product-data">
-              <span className='product-name'>ciasto1 </span>    
-              <span className='product-price'>12 PLN</span>    
+              <span className='product-name'>{dt.name} </span>    
+              <span className='product-price'>{dt.price} PLN</span>
+              <span id={dt.id} className='add-cart' onClick={(e)=>console.log(e.target.id)}>🛒</span>    
           </div>
         </div>
+        )
+       })}
       </div>
     </div>
   )
