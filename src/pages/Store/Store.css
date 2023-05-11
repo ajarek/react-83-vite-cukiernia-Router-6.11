@@ -54,8 +54,8 @@
 }
 .store .list .card {
   width: 360px;
-  height: 350px;
-  border: solid 3px var(--mainPink);
+  height: 360px;
+  border: solid 8px var(--mainPink);
   border-radius: 8px;
   overflow: hidden;
 }

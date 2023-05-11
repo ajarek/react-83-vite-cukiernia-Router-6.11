@@ -1,5 +1,6 @@
 .home{
-  height: calc(100vh - 12vh);
+  height: calc(100vh);
+  padding-top: 12vh;
   background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
   url('img/ciastka1.png')center fixed;
   background-position: center;
