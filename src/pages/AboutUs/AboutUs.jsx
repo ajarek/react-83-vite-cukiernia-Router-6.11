@@ -10,7 +10,7 @@ const AboutUs = () => {
       </div>
       <div className="img">
         <div className="wrapper-img">
-          <img src="./img/imgOnas.jpg" alt="cookie" width={'70%'} />
+          <img src="./img/imgOnas.jpg" alt="cookie"  />
         </div>
       </div>
     </div>

@@ -6,3 +6,56 @@
   place-items: center;
   border: 1px solid red;
 }
+.about-us .info h1{
+font-size: 6rem;
+}
+.about-us .info .text{
+  font-size: 1.5rem ;
+}
+.about-us .info .pink {
+  color: var(--mainPink);
+}
+.about-us .info,.about-us .img{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about-us .img{
+  align-items: center;
+  padding: 0 64px;
+}
+.about-us .wrapper-img{
+  border: 8px solid var(--mainPink);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.about-us .wrapper-img img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+cursor: pointer;
+transition:all 0.5s ease-in-out;
+}
+.about-us .wrapper-img img:hover{
+  transform: scale(1.5);
+}
+.about-us .link-store{
+  height: 85px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 2rem;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: 2px solid var(--mainBlack);
+  border-radius: 5px;
+  background-color: var(--mainWhite);
+  color: var(--mainPink);
+  transition: all 0.3s ease-in-out;
+ }
+ .about-us .link-store:hover{
+   background-color: var(--mainBlack);
+   border: 2px solid var(--mainPink);
+ }
