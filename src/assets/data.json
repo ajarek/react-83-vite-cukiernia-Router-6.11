@@ -3,72 +3,84 @@
    "id": "1",
     "src": "/img/ciasto1.jpg",
     "name": "ciasto 1",
-    "price":"12"
+    "price":"12",
+    "category":"ciastka"
   },
   {
     "id": "2",
      "src": "/img/ciasto2.jpg",
      "name": "ciasto 2",
-     "price":"12"
+     "price":"12",
+     "category":"ciastka"
    },
   {
     "id": "3",
      "src": "/img/ciasto3.jpg",
      "name": "ciasto 3",
-     "price":"12"
+     "price":"12",
+     "category":"ciastka"
    },
   {
     "id": "4",
      "src": "/img/ciasto4.jpg",
      "name": "babeczka 4",
-     "price":"15"
+     "price":"15",
+     "category":"babeczki"
    },
   {
     "id": "5",
      "src": "/img/ciasto5.jpg",
      "name": "babeczka 5",
-     "price":"15"
+     "price":"15",
+     "category":"babeczki"
    },
   {
     "id": "6",
      "src": "/img/ciasto6.jpg",
      "name": "babeczka 6",
-     "price":"15"
+     "price":"15",
+     "category":"babeczki"
    },
   {
     "id": "7",
      "src": "/img/ciasto7.jpg",
      "name": "słodycze 7",
-     "price":"13"
+     "price":"13",
+     "category":"słodycze"
    },
   {
     "id": "8",
      "src": "/img/ciasto8.jpg",
      "name": "słodycze 8",
-     "price":"13"
+     "price":"13",
+     "category":"słodycze"
    },
   {
     "id": "9",
      "src": "/img/ciasto9.jpg",
      "name": "słodycze 9",
-     "price":"13"
+     "price":"13",
+     "category":"słodycze"
    },
   {
     "id": "10",
      "src": "/img/ciasto10.jpg",
      "name": "pączki 10",
-     "price":"10"
+     "price":"10",
+     "category":"pączki"
    },
   {
     "id": "11",
      "src": "/img/ciasto11.jpg",
      "name": "pączki 11",
-     "price":"10"
+     "price":"10",
+     "category":"pączki"
    },
   {
     "id": "12",
      "src": "/img/ciasto12.jpg",
      "name": "pączki 12",
-     "price":"10"
+     "price":"10",
+     "category":"pączki"
    }
 ]

@@ -1,4 +1,4 @@
-
+import{useState} from 'react'
 import { useLoaderData} from 'react-router-dom'
 import data from '../../assets/data.json'
 import './Store.css'
@@ -7,7 +7,9 @@ export const storeLoader = () => {
   return products
 }
 const Store = () => {
+  const [filterProducts,setFilterProducts]=useState('all')
   const products = useLoaderData()
+ console.log(filterProducts)
   return (
     <div className='store'>
       <h1>
@@ -15,15 +17,17 @@ const Store = () => {
         <span className='pink'>Sklep</span>
       </h1>
       <div className='products'>
-        <button>Wszystko</button>
-        <button>Ciastka</button>
-        <button>Babeczki</button>
-        <button>Słodycze</button>
-        <button>Pączki</button>
+        <button onClick={()=>setFilterProducts('all')}>Wszystko</button>
+        <button onClick={()=>setFilterProducts('ciastka')}>Ciastka</button>
+        <button onClick={()=>setFilterProducts('babeczki')}>Babeczki</button>
+        <button onClick={()=>setFilterProducts('słodycze')}>Słodycze</button>
+        <button onClick={()=>setFilterProducts('pączki')}>Pączki</button>
       </div>
       <div className="search"><input type="search" placeholder='🔍 Szukaj' id="" /></div>
       <div className="list">
-        {products.map((dt)=>{
+        {products 
+        .filter(pr=>pr.category===filterProducts||filterProducts==='all')
+        .map((dt)=>{
           return(
         <div className="card" key={dt.id}>
           <div className="card-img">
