@@ -1,22 +1,27 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { AppContext } from '../../App'
 import { useLoaderData } from 'react-router-dom'
-import data from '../../assets/data.json'
 import './Store.css'
-export const storeLoader = () => {
-  const products = data || []
-  return products
+
+export const storeLoader = async () => {
+  let response = await fetch('src/assets/data.json')
+  let dataJson = await response.json()
+  return dataJson
 }
 const Store = () => {
   const [filterProducts, setFilterProducts] = useState('all')
   const [searchText, setSearchText] = useState('')
+  const { shoppingList, setShoppingList } = useContext(AppContext)
   const products = useLoaderData()
-  console.log(filterProducts)
+
   return (
     <div className='store'>
+      
       <h1>
         <span className='black'>Nasz </span>
         <span className='pink'>Sklep</span>
       </h1>
+
       <div className='products'>
         <button onClick={() => setFilterProducts('all')}>Wszystko</button>
         <button onClick={() => setFilterProducts('ciastka')}>Ciastka</button>
@@ -60,7 +65,9 @@ const Store = () => {
                   <span
                     id={dt.id}
                     className='add-cart'
-                    onClick={(e) => console.log(e.target.id)}
+                    onClick={(e) =>
+                      setShoppingList([...shoppingList, e.target.id])
+                    }
                   >
                     🛒
                   </span>

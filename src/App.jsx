@@ -6,7 +6,7 @@ import Home from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
 import Store, {storeLoader} from './pages/Store/Store'
 import Contact from './pages/Contact/Contact'
-import Cart from './pages/Cart/Cart'
+import Cart,{cartLoader} from './pages/Cart/Cart'
 import Error from './pages/Error/Error'
 export const AppContext = createContext()
 
@@ -39,7 +39,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <Cart />,       
+        element: <Cart />, 
+        loader:cartLoader,      
         errorElement: <Error />,
       },
      
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
   },
 ])
 function App() {
-  
+  const [shoppingList, setShoppingList] = useState([])
 
   return (
     <div
@@ -55,7 +56,7 @@ function App() {
       
     >
       <AppContext.Provider
-        value={{ }}
+        value={{shoppingList, setShoppingList }}
       >
         <RouterProvider router={router} />
       </AppContext.Provider>

@@ -1,10 +1,12 @@
-import  { useState } from 'react'
+import { useState, useContext } from 'react'
+import { AppContext } from '../../App'
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import './Nav.css'
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false)
+  const { shoppingList} = useContext(AppContext)
   return (
     <nav className='nav'>
       <Link className='link'
@@ -41,7 +43,7 @@ const Nav = () => {
         to={'/cart'}
       >
         <div className="cart-span">
-        🛒<span>0</span>
+        🛒<span>{shoppingList.length}</span>
         </div>
       </Link>
       </ul>
