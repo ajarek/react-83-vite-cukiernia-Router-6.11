@@ -1,7 +1,13 @@
-import React from 'react'
+
+import { useLoaderData} from 'react-router-dom'
 import data from '../../assets/data.json'
 import './Store.css'
+export const storeLoader = () => {
+  const products = data || []
+  return products
+}
 const Store = () => {
+  const products = useLoaderData()
   return (
     <div className='store'>
       <h1>
@@ -17,7 +23,7 @@ const Store = () => {
       </div>
       <div className="search"><input type="search" placeholder='🔍 Szukaj' id="" /></div>
       <div className="list">
-        {data.map((dt)=>{
+        {products.map((dt)=>{
           return(
         <div className="card" key={dt.id}>
           <div className="card-img">

@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Main from './layouts/Main/Main'
 import Home from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
-import Store from './pages/Store/Store'
+import Store, {storeLoader} from './pages/Store/Store'
 import Contact from './pages/Contact/Contact'
 import Cart from './pages/Cart/Cart'
 import Error from './pages/Error/Error'
@@ -28,7 +28,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'store',
-        element: <Store />,       
+        element: <Store />, 
+        loader:storeLoader,     
         errorElement: <Error />,
       },
       {
