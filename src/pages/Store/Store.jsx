@@ -66,7 +66,11 @@ const Store = () => {
                     id={dt.id}
                     className='add-cart'
                     onClick={(e) =>
-                      setShoppingList([...shoppingList, e.target.id])
+                      {
+                        shoppingList.includes(e.target.id)?
+                        null:
+                        setShoppingList([...shoppingList, e.target.id])
+                      }
                     }
                   >
                     🛒

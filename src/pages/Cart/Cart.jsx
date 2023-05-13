@@ -13,15 +13,17 @@ const Cart = () => {
   const dataLoader = useLoaderData()
   const { shoppingList, setShoppingList} = useContext(AppContext)
 
-  let cartProducts = dataLoader.filter((dt) => shoppingList.includes(dt.id))
+  const [cartProducts,setCartProducts] =useState (dataLoader.filter((dt) => shoppingList.includes(dt.id)))
   
   
-  const deleteItem = (id) => {
-    const newCart = shoppingList.filter((c) => c.id !== id)
-    setShoppingList(newCart)
+  const deleteItem = (id,index) => {
+    const deleteFilter = cartProducts.filter((c) => c.id !== id)
+    setCartProducts(deleteFilter)
+   let newShoppingList =shoppingList.filter((el,inx)=>inx!==index)
+   setShoppingList(newShoppingList)
   }
 
-  console.log(shoppingList);
+ 
   return (
     <div className='cart'>
       <table>
@@ -36,7 +38,7 @@ const Cart = () => {
         </tr>
       </thead>
       <tbody>
-      {cartProducts.map((el) => {
+      {cartProducts.map((el,index) => {
           return (
             <tr
               className='cart-wrapper'
@@ -54,7 +56,7 @@ const Cart = () => {
               <td>{2}</td>
               <td>{el.price}</td>
               <td>{(2 * el.price).toFixed(2)}</td>
-              <td onClick={()=> deleteItem(el.id)}>
+              <td onClick={()=> deleteItem(el.id,index)}>
                ❌
               </td>
             </tr>
