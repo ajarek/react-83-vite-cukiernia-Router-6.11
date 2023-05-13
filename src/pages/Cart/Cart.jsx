@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { AppContext } from '../../App'
 import { useLoaderData } from 'react-router-dom'
 import data from '../../assets/data.json'
@@ -12,7 +12,7 @@ export const cartLoader = async () => {
 const Cart = () => {
   const dataLoader = useLoaderData()
   const { shoppingList, setShoppingList} = useContext(AppContext)
-
+  const[allValues,setAllValues] = useState([])
   const [cartProducts,setCartProducts] =useState (dataLoader.filter((dt) => shoppingList.includes(dt.id)))
   
   
@@ -22,6 +22,12 @@ const Cart = () => {
    let newShoppingList =shoppingList.filter((el,inx)=>inx!==index)
    setShoppingList(newShoppingList)
   }
+
+  useEffect(()=>{
+  const allNode=  [...document.querySelectorAll('.value')]
+  const newAllValues = allNode.map((el) =>(+el.textContent))
+  return setAllValues(newAllValues)
+  },[cartProducts])
 
  
   return (
@@ -55,7 +61,7 @@ const Cart = () => {
               <td> {el.name} </td>
               <td>{2}</td>
               <td>{el.price}</td>
-              <td>{(2 * el.price).toFixed(2)}</td>
+              <td className='value'>{(2 * el.price).toFixed(2)}</td>
               <td onClick={()=> deleteItem(el.id,index)}>
                ❌
               </td>
@@ -69,7 +75,7 @@ const Cart = () => {
             className='all-sum'
             colSpan='7'
           >
-            Do zapłaty PLN:  0
+            Do zapłaty PLN:  {allValues.reduce((sum, el) => sum+el,0).toFixed(2)}
           </td>
         </tr>
         <tr>
