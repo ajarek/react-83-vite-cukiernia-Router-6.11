@@ -1,7 +1,7 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect,useRef } from 'react'
 import { AppContext } from '../../App'
 import { useLoaderData } from 'react-router-dom'
-import data from '../../assets/data.json'
+import Counter from '../../components/Counter/Counter'
 import './Cart.css'
 export const cartLoader = async () => {
   let response = await fetch('src/assets/data.json')
@@ -15,6 +15,14 @@ const Cart = () => {
   const[allValues,setAllValues] = useState([])
   const [cartProducts,setCartProducts] =useState (dataLoader.filter((dt) => shoppingList.includes(dt.id)))
   
+  const spanRef = useRef(null);
+  const handleClick = () => {
+    if(spanRef.current)
+    {const inputValue = spanRef.current.innerText;
+    return inputValue}
+    else {return 1}
+  };
+
   
   const deleteItem = (id,index) => {
     const deleteFilter = cartProducts.filter((c) => c.id !== id)
@@ -29,7 +37,7 @@ const Cart = () => {
   return setAllValues(newAllValues)
   },[cartProducts])
 
- 
+  
   return (
     <div className='cart'>
       <table>
@@ -59,9 +67,9 @@ const Cart = () => {
               </td>
 
               <td> {el.name} </td>
-              <td>{2}</td>
+              <td ><Counter id={el.id} refen={spanRef}/></td>
               <td>{el.price}</td>
-              <td className='value'>{(2 * el.price).toFixed(2)}</td>
+              <td className='value'>{handleClick()*el.price}</td>
               <td onClick={()=> deleteItem(el.id,index)}>
                ❌
               </td>

@@ -76,6 +76,7 @@ const Store = () => {
                     🛒
                   </span>
                 </div>
+                
               </div>
             )
           })}
