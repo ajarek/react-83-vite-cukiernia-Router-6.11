@@ -15,15 +15,18 @@ const Cart = () => {
   const[allValues,setAllValues] = useState([])
   const [cartProducts,setCartProducts] =useState (dataLoader.filter((dt) => shoppingList.includes(dt.id)))
   
-  const spanRef = useRef(null);
-  const handleClick = () => {
-    if(spanRef.current)
-    {const inputValue = spanRef.current.innerText;
-    return inputValue}
-    else {return 1}
-  };
-
   
+  const handleClick = () => {
+   const lol =[...document.querySelectorAll('.span')]
+   lol.forEach((item)=>
+   {
+        item.closest('.cart-wrapper').children[4].innerHTML=item.innerHTML*item.closest('.cart-wrapper').children[3].innerHTML
+  })
+   
+  };
+ 
+
+
   const deleteItem = (id,index) => {
     const deleteFilter = cartProducts.filter((c) => c.id !== id)
     setCartProducts(deleteFilter)
@@ -67,9 +70,9 @@ const Cart = () => {
               </td>
 
               <td> {el.name} </td>
-              <td ><Counter id={el.id} refen={spanRef}/></td>
+              <td onClick={()=> handleClick()} ><Counter /></td>
               <td>{el.price}</td>
-              <td className='value'>{handleClick()*el.price}</td>
+              <td className='value'></td>
               <td onClick={()=> deleteItem(el.id,index)}>
                ❌
               </td>

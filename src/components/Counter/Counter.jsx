@@ -2,11 +2,11 @@ import { useState,useRef } from 'react';
 
 
 import './Counter.css'
-const Counter = ({id,refen}) => {
+const Counter = ({}) => {
   
 
 
-const [count,setCount]=useState(1)
+const [count,setCount]=useState(0)
   const handleIncrement = () => {
      setCount(count+1) 
      
@@ -18,7 +18,7 @@ const [count,setCount]=useState(1)
   return (
     <div>
       <button onClick={handleIncrement}>➕</button>
-      <span id={id} ref={refen}>{count}</span>
+      <span className='span' >{count}</span>
       <button onClick={handleDecrement}>➖</button>
     </div>
   );
