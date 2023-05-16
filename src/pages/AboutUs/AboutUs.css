@@ -1,10 +1,12 @@
 .about-us{
-  height: calc(100vh);
+  min-height: 100vh;
   padding-top: 12vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 16px 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   place-items: center;
+  background-color: red;
 }
 .about-us .info h1{
 font-size: 6rem;
@@ -29,6 +31,7 @@ font-size: 6rem;
   border: 8px solid var(--mainPink);
   overflow: hidden;
   border-radius: 10px;
+  
 }
 .about-us .wrapper-img img{
 height: 100%;
@@ -58,4 +61,23 @@ transition:all 0.5s ease-in-out;
  .about-us .link-store:hover{
    background-color: var(--mainBlack);
    border: 2px solid var(--mainPink);
+ }
+ @media (max-width:700px) {
+  .about-us{
+    grid-template-columns: repeat(1, 1fr); 
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .about-us .info h1{
+    font-size: 3rem;
+  }
+  .about-us .link-store{
+    height: 50px;
+    align-self: center;
+    margin: 16px 0;
+    font-size: 1.5rem;
+  }
+  .about-us .wrapper-img{
+    margin-bottom: 16px;
+  }
  }

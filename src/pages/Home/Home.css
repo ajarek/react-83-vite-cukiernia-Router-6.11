@@ -15,7 +15,7 @@
   text-align: center;
 }
 .home .white{
-  color: var(--mainWhite);
+  color: var(--mainPink);
 }
 .home .pink{
  color: var(--mainPink);
@@ -35,4 +35,10 @@
 .home .link:hover{
   background-color: var(--mainBlack);
   border: 2px solid var(--mainPink);
+}
+@media (max-width: 480px) {
+  .home h1{
+    font-size: 3rem;
+    
+  }
 }

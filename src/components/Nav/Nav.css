@@ -76,7 +76,7 @@
     top: -100vh;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
-    background: var(--mainWhite);
+    background: var(--mainGrey);
     height: 20rem;
     
   }
@@ -107,6 +107,9 @@
   .nav .title h1 {
     font-size: 1rem;
     text-align: center;
+  }
+  .nav .wrapper {
+    width: 100%;
   }
 }
 

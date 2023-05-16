@@ -26,6 +26,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-top: 5px;
 }
 .store .products button:hover,
 .store .products button:focus {
@@ -88,4 +89,29 @@
 }
 .store .list .product-data .add-cart:hover {
   background-color: var(--mainBlack);
+}
+@media (max-width:450px) {
+  .store{
+    padding: 5px;
+  }
+  .store .list {
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .store h1{
+    font-size: 2rem;
+  }
+  .store .search input{
+    min-width: 300px;
+  }
+  .store .list .card {
+    width: 280px;
+    border: solid 4px var(--mainPink);
+  }
+  .store .list .card-img {
+    width: 300px;
+  height: 300px;
+  }
+  
+    
 }

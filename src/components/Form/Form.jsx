@@ -26,7 +26,7 @@ export const Form = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
         type='text'
-        placeholder='Name...'
+        placeholder='Imię i Nazwisko...'
         {...register('name')}
       />
       <p>{errors?.name?.message}</p>
@@ -38,7 +38,7 @@ export const Form = () => {
       <p>{errors.email?.message}</p>
       <input
         type='text'
-        placeholder='Message...'
+        placeholder='Wiadomość...'
         {...register('text')}
       />
       <p>{errors.text?.message}</p>

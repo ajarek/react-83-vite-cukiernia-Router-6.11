@@ -13,7 +13,7 @@ export const Contact = () => {
   return (
     <div className='contact'>
       <div className='left-wrapper'>
-        <h1>Contact</h1>
+        <h1>Kontakt</h1>
         <a
           className={'link'}
           href='tel:+48573219230'
@@ -31,7 +31,7 @@ export const Contact = () => {
         </a>
       </div>
       <div className='right-wrapper'>
-        <p>Write a message to us.</p>
+        <p>Napisz do Nas 🖊️ :</p>
         <Form />
       </div>
       <div className='footer'>
