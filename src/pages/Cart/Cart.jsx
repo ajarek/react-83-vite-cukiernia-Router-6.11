@@ -16,14 +16,7 @@ const Cart = () => {
   const [cartProducts,setCartProducts] =useState (dataLoader.filter((dt) => shoppingList.includes(dt.id)))
   
   
-  const handleClick = () => {
-   const lol =[...document.querySelectorAll('.span')]
-   lol.forEach((item)=>
-   {
-        item.closest('.cart-wrapper').children[4].innerHTML=item.innerHTML*item.closest('.cart-wrapper').children[3].innerHTML
-  })
-   
-  };
+  
  
 
 
@@ -70,9 +63,9 @@ const Cart = () => {
               </td>
 
               <td> {el.name} </td>
-              <td onClick={()=> handleClick()} ><Counter /></td>
+              <td><Counter/></td>
               <td>{el.price}</td>
-              <td className='value'></td>
+              <td className='value'>{(1*el.price).toFixed(2)}</td>
               <td onClick={()=> deleteItem(el.id,index)}>
                ❌
               </td>

@@ -10,8 +10,10 @@
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
   --mainGrey: #eeeeee;
+  --main-darkGrey:#808080;
   --mainBlack: #000000;
   --yellowTrans: rgba(249, 228, 148, 0.6);
+  --mainRed:#ff0000;
 }
 body {
   font-family: 'Kaushan Script', cursive;
