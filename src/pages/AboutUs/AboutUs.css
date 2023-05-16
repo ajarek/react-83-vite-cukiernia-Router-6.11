@@ -1,4 +1,4 @@
-.about-us{
+.about-us {
   min-height: 100vh;
   padding-top: 12vh;
   display: grid;
@@ -8,47 +8,47 @@
   place-items: center;
   background-color: red;
 }
-.about-us .info h1{
-font-size: 6rem;
+.about-us .info h1 {
+  font-size: 6rem;
 }
-.about-us .info .text{
-  font-size: 1.5rem ;
+.about-us .info .text {
+  font-size: 1.5rem;
 }
 .about-us .info .pink {
   color: var(--mainPink);
 }
-.about-us .info,.about-us .img{
+.about-us .info,
+.about-us .img {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.about-us .img{
+.about-us .img {
   align-items: center;
   padding: 0 64px;
 }
-.about-us .wrapper-img{
+.about-us .wrapper-img {
   border: 8px solid var(--mainPink);
   overflow: hidden;
   border-radius: 10px;
-  
 }
-.about-us .wrapper-img img{
-height: 100%;
-width: 100%;
-object-fit: cover;
-cursor: pointer;
-transition:all 0.5s ease-in-out;
+.about-us .wrapper-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-.about-us .wrapper-img img:hover{
+.about-us .wrapper-img img:hover {
   transform: scale(1.5);
 }
-.about-us .link-store{
+.about-us .link-store {
   height: 85px;
   width: 200px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 2rem;
   text-decoration: none;
   letter-spacing: 3px;
@@ -57,27 +57,27 @@ transition:all 0.5s ease-in-out;
   background-color: var(--mainWhite);
   color: var(--mainPink);
   transition: all 0.3s ease-in-out;
- }
- .about-us .link-store:hover{
-   background-color: var(--mainBlack);
-   border: 2px solid var(--mainPink);
- }
- @media (max-width:700px) {
-  .about-us{
-    grid-template-columns: repeat(1, 1fr); 
+}
+.about-us .link-store:hover {
+  background-color: var(--mainBlack);
+  border: 2px solid var(--mainPink);
+}
+@media (max-width: 700px) {
+  .about-us {
+    grid-template-columns: repeat(1, 1fr);
     padding-left: 16px;
     padding-right: 16px;
   }
-  .about-us .info h1{
+  .about-us .info h1 {
     font-size: 3rem;
   }
-  .about-us .link-store{
+  .about-us .link-store {
     height: 50px;
     align-self: center;
     margin: 16px 0;
     font-size: 1.5rem;
   }
-  .about-us .wrapper-img{
+  .about-us .wrapper-img {
     margin-bottom: 16px;
   }
- }
+}

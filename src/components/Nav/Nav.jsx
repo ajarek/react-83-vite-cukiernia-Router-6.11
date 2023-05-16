@@ -6,46 +6,51 @@ import './Nav.css'
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false)
-  const { shoppingList} = useContext(AppContext)
+  const { shoppingList } = useContext(AppContext)
   return (
     <nav className='nav'>
-      <Link className='link'
-        to={'/'}>
-        <img src="/img/donut.jpg" alt="" />
-      </Link>
-      <ul className={!isOpen ? 'wrapper' : 'wrapper navbar-none'}>
-      <Link
-        className='link link-text'
-        to={'/'}
-      >
-        Główna
-      </Link>
-      <Link
-        className='link link-text'
-        to={'/about-us'}
-      >
-        O nas
-      </Link>
-      <Link
-        className='link link-text'
-        to={'/store'}
-      >
-        Sklep
-      </Link>
-      <Link
-        className='link link-text'
-        to={'/contact'}
-      >
-        Kontakt
-      </Link>
       <Link
         className='link'
-        to={'/cart'}
+        to={'/'}
       >
-        <div className="cart-span">
-        🛒<span>{shoppingList.length}</span>
-        </div>
+        <img
+          src='/img/donut.jpg'
+          alt=''
+        />
       </Link>
+      <ul className={!isOpen ? 'wrapper' : 'wrapper navbar-none'}>
+        <Link
+          className='link link-text'
+          to={'/'}
+        >
+          Główna
+        </Link>
+        <Link
+          className='link link-text'
+          to={'/about-us'}
+        >
+          O nas
+        </Link>
+        <Link
+          className='link link-text'
+          to={'/store'}
+        >
+          Sklep
+        </Link>
+        <Link
+          className='link link-text'
+          to={'/contact'}
+        >
+          Kontakt
+        </Link>
+        <Link
+          className='link'
+          to={'/cart'}
+        >
+          <div className='cart-span'>
+            🛒<span>{shoppingList.length}</span>
+          </div>
+        </Link>
       </ul>
       <div className='hamburger'>
         <Hamburger

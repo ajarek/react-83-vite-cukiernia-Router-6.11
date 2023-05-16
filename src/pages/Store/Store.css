@@ -71,7 +71,7 @@
   object-fit: cover;
   transition: all 0.5s ease-in-out;
 }
-.store .list .card-img img:hover{
+.store .list .card-img img:hover {
   transform: scale(1.2);
 }
 .store .list .product-data {
@@ -90,18 +90,18 @@
 .store .list .product-data .add-cart:hover {
   background-color: var(--mainBlack);
 }
-@media (max-width:450px) {
-  .store{
+@media (max-width: 450px) {
+  .store {
     padding: 5px;
   }
   .store .list {
     gap: 8px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .store h1{
+  .store h1 {
     font-size: 2rem;
   }
-  .store .search input{
+  .store .search input {
     min-width: 300px;
   }
   .store .list .card {
@@ -110,8 +110,6 @@
   }
   .store .list .card-img {
     width: 300px;
-  height: 300px;
+    height: 300px;
   }
-  
-    
 }

@@ -16,7 +16,6 @@ const Store = () => {
 
   return (
     <div className='store'>
-      
       <h1>
         <span className='black'>Nasz </span>
         <span className='pink'>Sklep</span>
@@ -65,18 +64,15 @@ const Store = () => {
                   <span
                     id={dt.id}
                     className='add-cart'
-                    onClick={(e) =>
-                      {
-                        shoppingList.includes(e.target.id)?
-                        null:
-                        setShoppingList([...shoppingList, e.target.id])
-                      }
-                    }
+                    onClick={(e) => {
+                      shoppingList.includes(e.target.id)
+                        ? null
+                        : setShoppingList([...shoppingList, e.target.id])
+                    }}
                   >
                     🛒
                   </span>
                 </div>
-                
               </div>
             )
           })}

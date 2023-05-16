@@ -34,8 +34,8 @@ form input[type='submit'] {
   background-color: var(--mainPink);
 }
 form input[type='submit']:hover {
-  background-color:var(--mainYellow);
+  background-color: var(--mainYellow);
 }
 form p {
-  color:var(--mainRed) ;
+  color: var(--mainRed);
 }

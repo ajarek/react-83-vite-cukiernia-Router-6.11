@@ -3,8 +3,16 @@ import './Home.css'
 const Home = () => {
   return (
     <div className='home'>
-      <h1><span className="white">Witamy w </span><span className="pink">Cukierni</span></h1>
-       <Link className='link' to={'/store'}>🍰 Odkryj</Link>
+      <h1>
+        <span className='white'>Witamy w </span>
+        <span className='pink'>Cukierni</span>
+      </h1>
+      <Link
+        className='link'
+        to={'/store'}
+      >
+        🍰 Odkryj
+      </Link>
     </div>
   )
 }
